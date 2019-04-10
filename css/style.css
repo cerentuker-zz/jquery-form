@@ -39,6 +39,7 @@ a {
 form {
 	padding: .875em 1.875em 1.875em;
 	background: #85b5ca;
+	border-radius: 3%;
 }
 
 fieldset,
@@ -133,6 +134,10 @@ button:hover {
 
 .credit-card {
 	margin-top: 1.25em;
+}
+
+.other-job {
+	display: none;
 }
 
 /* ================================= 

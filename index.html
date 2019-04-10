@@ -12,7 +12,7 @@
     
     <header>
       <span>Register for</span>
-      <h1>Full Stack Conf</h1>
+      <h1>Full Stack Conference</h1>
     </header>
 
     <form action="index.html" method="post">
@@ -21,7 +21,7 @@
         <legend>Basic Info</legend>
         
         <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name">
+        <input type="text" id="name" name="user_name" autofocus>
         
         <label for="mail">Email:</label>
         <input type="email" id="mail" name="user_email">
@@ -34,7 +34,11 @@
           <option value="designer">Designer</option>          
           <option value="student">Student</option>
           <option value="other">Other</option>  
-        </select>           
+        </select>
+        <div class="other-job">
+          <label for="other-job">Your Job Role:</label>
+          <input type="text" id="other-job" name="user_other-job" autofocus>
+        </div>
       </fieldset>
       
       <fieldset class="shirt">
@@ -133,7 +137,7 @@
             <option value="2018">2018</option>
             <option value="2019">2019</option>
             <option value="2020">2020</option>        		          
-          </select> 	                  	         
+          </select> 	                          
         </div>
 
         <div>
@@ -150,6 +154,8 @@
       
     </form>
 
-	</div>
+  </div>
+  <script src="js/jquery-3.3.1.min.js"></script> <!-- pay attention to add jquery before other scripts that refer to it!-->
+  <script src="js/script.js"></script>
 </body>
 </html>
