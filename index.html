@@ -21,10 +21,10 @@
         <legend>Basic Info</legend>
         
         <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name" autofocus>
+        <input type="text" id="name" name="user_name" required="true" autofocus>
         
         <label for="mail">Email:</label>
-        <input type="email" id="mail" name="user_email">
+        <input type="email" id="mail" name="user_email" required="true" regexp="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$">
         
         <label for="title">Job Role</label>
         <select id="title" name="user_title">
@@ -102,17 +102,17 @@
 
           <div class="col-6 col">
             <label for="cc-num">Card Number:</label>
-        	  <input id="cc-num" name="user_cc-num" type="text">
+        	  <input id="cc-num" name="user_cc-num" type="text" required="true" pattern="\d{13-16}">
           </div>
 
           <div class="col-3 col">
-            <label for="zip">Zip Code:</label>
-            <input id="zip" name="user_zip" type="text"> 
+            <label for="zip">Zip Code:</label> 
+            <input id="zip" name="user_zip" type="text" required="true" pattern="\d{5}"> 
           </div>
 
           <div class="col-3 col">
             <label for="cvv">CVV:</label>
-            <input id="cvv" name="user_cvv" type="text"> 
+            <input id="cvv" name="user_cvv" type="text" required="true" pattern="\d{3}"> 
           </div>
 
           <label for="exp-month">Expiration Date:</label>

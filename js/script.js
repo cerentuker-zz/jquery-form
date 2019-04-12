@@ -59,6 +59,7 @@ $('input[type="checkbox"]').click(function () {
 //func that gets the date string from clicked checkbox label, since I am not allowed to modify the html I needed this messy workaround
 const fetchDateFromEventString = (eventString) => eventString.split('—')[1];
 
+// payment method selection changes the following required fields to be filled out by user
 $('#payment').on('change', function () {
     $('#select-method').remove();
     updatePaymentMethodsDiv($('#payment').val());
@@ -81,5 +82,13 @@ const updatePaymentMethodsDiv = (selectedPaymentMethod) => {
 };
 
 $('#submitbutton').click(function () {
-
+    validateForm();
 });
+/**
+ * function to validate form. Will add more manual checks to practice what's happening backstage
+ */
+const validateForm = () => {
+    if ($('input:checkbox:checked').length == 0) {
+        alert("Please select at least one activity!");
+    }
+};
